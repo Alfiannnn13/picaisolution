@@ -1,0 +1,26 @@
+<svg width="400" height="200" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Filter for shadow effect -->
+  <defs>
+    <filter id="shadow" x="0" y="0" width="150%" height="150%">
+      <feDropShadow dx="5" dy="5" stdDeviation="5" flood-color="rgba(0, 0, 0, 0.3)"/>
+    </filter>
+  </defs>
+
+  <!-- Background with rounded corners and shadow, but without color fill -->
+  <rect x="10" y="10" width="380" height="180" rx="20" ry="20" fill="none" filter="url(#shadow)"/> <!-- Latar belakang transparan dengan bayangan -->
+  
+  <!-- Camera body centered vertically -->
+  <rect x="50" y="62.5" width="100" height="75" rx="15" ry="15" fill="#60A5FA" stroke="#0056D2" stroke-width="5"/>
+  
+  <!-- Camera lens -->
+  <circle cx="100" cy="100" r="30" fill="#ffffff" stroke="#60A5FA" stroke-width="5"/>
+  <circle cx="100" cy="100" r="15" fill="#60A5FA"/>
+  
+  <!-- Text -->
+  <text x="250" y="90" font-family="Arial, sans-serif" font-weight="bold" font-size="40" fill="#60A5FA" text-anchor="middle">PicAI</text>
+  <text x="250" y="140" font-family="Arial, sans-serif" font-weight="bold" font-size="40" fill="#60A5FA" text-anchor="middle">Solution</text>
+  
+  <!-- Decorative Circle with centered text -->
+  <circle cx="370" cy="100" r="30" fill="#60A5FA"/>
+  <text x="370" y="105" font-family="Arial, sans-serif" font-size="30" fill="#fff" text-anchor="middle" dominant-baseline="middle">AI</text>
+</svg>
