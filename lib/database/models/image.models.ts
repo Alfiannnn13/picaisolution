@@ -1,5 +1,26 @@
 import { transformationTypes } from "@/constants";
-import {model, models, Schema} from "mongoose";
+import {Document, model, models, Schema} from "mongoose";
+
+export interface IImage extends Document {
+    title: string;
+    transformationTypes: string;
+    publicId: string;
+    secureUrl: URL;
+    width?: number;
+    height?: number;
+    config?: Record<string, unknown>;
+    transformationUrl?: URL;
+    aspectRatio?: string;
+    color?: string;
+    prompt?: string;
+    author: {
+        _id: string;
+        firstName: string;
+        lastName: string;
+    };
+    createdAt?: Date;
+    updatedAt?: Date;
+}
 
 const ImageSchema = new Schema ({
     title: {type: String, required: true}, 
