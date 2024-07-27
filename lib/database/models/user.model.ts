@@ -1,5 +1,3 @@
-// clerk, email, usname, poto, fn, ln, plnid, cb
-
 import { Schema, model, models } from "mongoose";
 
 const UserSchema = new Schema({

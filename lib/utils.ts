@@ -39,7 +39,8 @@ const shimmer = (w: number, h: number) => `
   </defs>
   <rect width="${w}" height="${h}" fill="#7986AC" />
   <rect id="r" width="${w}" height="${h}" fill="url(#g)" />
-<animate xlink:href="#r" attributeName="x" from="-${w}" to="${w}" dur="1s" repeatCount="indefinite" /></svg>`;
+  <animate xlink:href="#r" attributeName="x" from="-${w}" to="${w}" dur="1s" repeatCount="indefinite"  />
+</svg>`;
 
 const toBase64 = (str: string) =>
   typeof window === "undefined"
@@ -131,7 +132,7 @@ export const download = (url: string, filename: string) => {
 
 // DEEP MERGE OBJECTS
 export const deepMergeObjects = (obj1: any, obj2: any) => {
-  if (obj2 === null || obj2 === undefined) {
+  if(obj2 === null || obj2 === undefined) {
     return obj1;
   }
 
