@@ -24,19 +24,18 @@ module.exports = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         purple: {
-          100: "#D0E3FF", // Biru muda yang lebih netral
-          200: "#A2C2FF", // Biru muda lebih cerah
-          400: "#60A5FA", // Biru medium (mirip dengan Tailwind `blue-400`)
-          500: "#4285F4", // Biru standar
-          600: "#1E3A8A", // Biru gelap
+          100: "#D0E3FF",
+          200: "#A2C2FF",
+          400: "#60A5FA",
+          500: "#4285F4",
+          600: "#1E3A8A",
         },
         dark: {
-          400: "#90A4AE", // Biru abu-abu medium
-          500: "#607D8B", // Biru abu-abu
-          600: "#455A64", // Biru abu-abu gelap
-          700: "#263238", // Biru abu-abu sangat gelap
+          400: "#90A4AE",
+          500: "#607D8B",
+          600: "#455A64",
+          700: "#263238",
         },
-        
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",

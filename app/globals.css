@@ -90,6 +90,7 @@
 /* ========================================== TAILWIND STYLES */
 @layer utilities {
   /* ===== UTILITIES */
+  
   .wrapper {
     @apply max-w-5xl mx-auto px-5 md:px-10 w-full text-dark-400 p-16-regular;
   }
@@ -110,7 +111,7 @@
   /* ===== TYPOGRAPHY */
   /* 44 */
   .h1-semibold {
-    @apply text-[36px] font-semibold sm:text-[44px] leading-[120%] sm:leading-[56px];
+    @apply text-[28px] font-semibold sm:text-[44px] leading-[120%] sm:leading-[56px];
   }
 
   /* 36 */
@@ -220,11 +221,29 @@
 
   /* Home Page */
   .home {
-    @apply sm:flex-center hidden h-72 flex-col gap-4 rounded-[20px] border bg-banner bg-cover bg-no-repeat p-10 shadow-inner;
+    @apply flex flex-col items-center justify-center h-72 md:h-96 lg:h-[500px] rounded-[20px] border bg-banner bg-cover bg-no-repeat bg-center p-4 sm:p-6 md:p-8 lg:p-10 shadow-inner;
   }
+  
+  .home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 18rem; /* Tailwind's h-72 */
+    border-radius: 20px;
+    border: 1px solid; /* Adjust based on your design */
+    background-image: url('/assets/images/banner-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2.5rem; /* Tailwind's p-10 */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* Tailwind's shadow-inner */
+  }
+  
+  
 
   .home-heading {
-    @apply h1-semibold max-w-[500px] flex-wrap text-center text-white shadow-sm;
+    @apply h1-semibold max-w-[500px] flex-wrap text-center text-white;
   }
 
   /* Credits Page */
