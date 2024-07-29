@@ -22,7 +22,7 @@ declare type AddImageParams = {
   image: {
     title: string;
     publicId: string;
-    transformationType: string;
+    transformationTypes: string;
     width: number;
     height: number;
     config: any;
@@ -41,7 +41,7 @@ declare type UpdateImageParams = {
     _id: string;
     title: string;
     publicId: string;
-    transformationType: string;
+    transformationTypes: string;
     width: number;
     height: number;
     config: any;
