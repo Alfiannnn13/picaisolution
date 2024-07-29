@@ -103,12 +103,12 @@ export async function getAllImages({ limit = 9, page = 1, searchQuery = '' }: {
 
     cloudinary.config({
       cloud_name: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
-      api_key: process.env.CLOUDINARY_API_KEY,
+      api_key: process.env.NEXT_PUBLIC_CLOUDINARY_API_KEY,
       api_secret: process.env.CLOUDINARY_API_SECRET,
       secure: true,
     })
 
-    let expression = 'folder=imaginify';
+    let expression = 'folder=picaisolution';
 
     if (searchQuery) {
       expression += ` AND ${searchQuery}`

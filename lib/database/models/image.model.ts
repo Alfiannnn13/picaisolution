@@ -1,6 +1,7 @@
 import { Document, Schema, model, models } from "mongoose";
 
 export interface IImage extends Document {
+  transformationTypes: TransformationTypeKey;
   title: string;
   transformationType: string;
   publicId: string;

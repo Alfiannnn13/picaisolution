@@ -1,9 +1,16 @@
+import { Collection } from "@/components/shared/Collection";
 import { navLinks } from "@/constants";
+import { getAllImages } from "@/lib/actions/image.actions";
+import { Images } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const Home = () => {
+const Home = async ({ searchParams}: SearchParamProps) => {
+  const page = Number(searchParams?.page) || 1;
+  const searchQuery = (searchParams?.query as string) || '';
+
+  const images = await getAllImages({ page, searchQuery})
   return (
     <>
       <section className="home">
@@ -26,6 +33,15 @@ const Home = () => {
             </Link>
           ))}
         </ul>
+      </section>
+
+      <section className="sm:mt-15">
+        <Collection 
+          hasSearch={true}
+          images={images?.data}
+          totalPages={images?.totalPage}
+          page={page}
+        />
       </section>
     </>
   );
