@@ -48,7 +48,7 @@ export const Collection = ({
 
   return (
     <>
-      <div className="collection-heading mt-10">
+      <div className="collection-heading mt-12">
         <h2 className="h2-bold text-dark-600">Recent Edits</h2>
         {hasSearch && <Search />}
       </div>
@@ -56,7 +56,7 @@ export const Collection = ({
       {images.length > 0 ? (
         <ul className="collection-list">
           {images.map((image) => (
-            <Card image={image} />
+            <Card image={image} key={image._id} />
           ))}
         </ul>
       ) : (
